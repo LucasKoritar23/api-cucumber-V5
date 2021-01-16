@@ -13,5 +13,6 @@ end
 Então('deve apresentar o code {int} para a requisição de criação') do |http_status|
   @response_criar_contato = JSON.pretty_generate(JSON.parse(@request_criar_contato.to_json))
   log_util(@response_criar_contato)
+  binding.pry
   expect(@request_criar_contato.code).to eq(http_status)
 end
