@@ -62,7 +62,8 @@ def execute_delete(http_party, token, url, headers = nil)
 end
 
 def log_util(message)
-  log_message = "[RED-FIVE][#{Time.now}] - #{message}"
+  time = Time.now.strftime("%d-%m-%y %H:%M:%S")
+  log_message = "[RED-FIVE][#{time}] - #{message}"
   log(log_message)
   Allure.add_attachment(name: "log", source: log_message, type: Allure::ContentType::TXT)
 end
