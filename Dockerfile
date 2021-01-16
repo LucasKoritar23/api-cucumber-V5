@@ -22,12 +22,14 @@ RUN apk add vim
 RUN apk add bash
 RUN apk add git
 
-RUN curl -o allure-2.7.0.tgz -Ls https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.7.0/allure-2.7.0.tgz
-RUN tar -zxvf allure-2.7.0.tgz -C /opt/
-RUN ln -s /opt/allure-2.7.0/bin/allure /usr/bin/allure
+RUN curl -o allure-commandline-2.13.8.tgz -Ls https://dl.bintray.com/qameta/maven/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
+RUN tar -zxvf allure-commandline-2.13.8.tgz -C /opt/
+RUN ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
 
 RUN apk add --no-cache tzdata
 ENV TZ America/Sao_Paulo
 
 RUN gem install bundler
+RUN gem install webrick
+RUN bundle install
 RUN chmod 777 -R /api-cucumber-V5
