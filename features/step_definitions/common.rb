@@ -60,3 +60,9 @@ end
 def execute_delete(http_party, token, url, headers = nil)
   http_party.class.delete(URI.parse(URI.encode(url)), prepare_request(token, nil, headers))
 end
+
+def log_util(message)
+  log_message = "[RED-FIVE][#{Time.now}] - #{message}"
+  log(log_message)
+  Allure.add_attachment(name: "log", source: log_message, type: Allure::ContentType::TXT)
+end
