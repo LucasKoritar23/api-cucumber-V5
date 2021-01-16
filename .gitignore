@@ -1,8 +1,2 @@
 Gemfile.lock
 /reports/html/*.html
-/reports/target/*.json
-/reports/allure-results/*.txt
-/reports/allure-results/*.json
-/reports/allure-results/*.csv
-/reports/allure-results/*
-/reports/allure-results/allure-reports-s3/*
