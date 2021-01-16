@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'cucumber'
+gem 'rspec'
+gem 'rake'
+gem 'faker'
+gem 'httparty'
+gem 'rspec'
+gem 'allure-cucumber'
+gem 'pry-byebug'

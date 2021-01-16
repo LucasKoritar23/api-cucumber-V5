@@ -1,0 +1,5 @@
+require 'rspec'
+require 'cucumber'
+require 'pry'
+require 'httparty'
+require 'allure-cucumber'
